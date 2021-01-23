@@ -24,7 +24,7 @@ const calculate = (requiredBottles, prices, pieces) => {
   // Calc Bottles
   if (pieces[0] > 0) {
     if (pieces[1] > 0) remBottles %= pieces[1];
-    if (pieces[2] > 0) remBottles %= pieces[2];
+    else if (pieces[2] > 0) remBottles %= pieces[2];
     else remBottles = requiredBottles;
     if (remBottles > 0) {
       result.bottles =
